@@ -1,0 +1,20 @@
+\newcommand{\name}{Gianni Tumedei}
+
+\renewcommand{\title}[1]{{\huge \textbf{#1}}}
+
+\renewcommand{\section}[1]{{\sffamily
+  \vspace{10pt}
+  \textcolor{sky}{\textbf{\expandafter\MakeUppercase\expandafter{#1}}}
+  \vspace{20pt}
+}}
+
+\newcommand{\heading}[1]{{\large \textbf{#1} \vspace{4pt}}}
+
+\newcommand{\subheading}[1]{\textit{#1}\newline}
+
+\newcommand{\twocols}[2]{
+  \begin{tabularx}{\textwidth}{ p{0.3\textwidth} X p{0.65\textwidth} }
+    \makecell[tl]{#1} && #2 \\
+  \end{tabularx}
+  \vspace{20pt}
+}

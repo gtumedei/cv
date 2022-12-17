@@ -1,0 +1,74 @@
+% Packages
+% -------------------- %
+
+% Apply the document encoding
+\usepackage[utf8]{inputenc}
+% Set the document language/s
+\usepackage[english]{babel}
+% Set margins
+\usepackage[hmargin=2cm,vmargin=3cm,headheight=16pt]{geometry}
+% Apply the Merryweather font
+\usepackage{merriweather}
+\usepackage[T1]{fontenc}
+% Customize links
+\usepackage[english]{hyperref}
+% Include graphics
+\usepackage{graphicx}
+% Create better tables
+\usepackage{tabularx}
+% Use floating positioning (like H inside figures)
+\usepackage{float}
+% Customize lists
+\usepackage{enumitem}
+% Customize the space between paragraphs
+\usepackage{parskip}
+% Provide additional color syntax
+\usepackage{xcolor}
+% Customize headers and footers
+\usepackage{fancyhdr}
+% Create table cells with line breaks inside
+\usepackage{makecell}
+
+% Package config
+% -------------------- %
+
+% Remove indent for the first paragraph line
+\setlength{\parindent}{0pt}
+
+% Remove table cell padding
+\renewcommand{\tabcolsep}{1pt}
+
+% Customize link colors
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  filecolor=blue,
+  urlcolor=blue,
+  citecolor=blue
+}
+
+% Use dashes for itemize
+\renewcommand\labelitemi{-}
+
+% Set graphics folder path
+\graphicspath{{./img/}}
+
+% Heading color
+\definecolor{sky}{HTML}{2079C7}
+
+% Setup page styles
+
+% Page number only
+\fancypagestyle{style1}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[R]{\thepage}
+}
+
+% Name and page number
+\fancypagestyle{style2}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhead[R]{\name}
+  \fancyfoot[R]{\thepage}
+}
