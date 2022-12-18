@@ -2,6 +2,7 @@
 
 \input{src/packages}
 \input{src/commands}
+\input{env}
 
 % -------------------- %
 
@@ -23,27 +24,27 @@
     \iconrow{
       \includegraphics[width=0.5cm]{email-outline.png}
     }{
-      \email{a@a.aa} \newline \email{b@b.bb} \vspace{10pt}
+      \email{\emaila} \newline \email{\emailb} \newline \email{\emailc} \vspace{10pt}
     }
     \iconrow{
       \includegraphics[width=0.5cm]{phone-outline.png}
     }{
-      \tel{+39 123 456 7890} \vspace{10pt}
+      \tel{\phone} \vspace{10pt}
     }
     \iconrow{
       \includegraphics[width=0.5cm]{web.png}
     }{
-      \link{https://www.google.it}{https://www.google.it} \vspace{10pt}
+      \link{\website}{\website} \vspace{10pt}
     }
     \iconrow{
       \includegraphics[width=0.5cm]{map-marker-outline.png}
     }{
-      Address \vspace{10pt}
+      \address \vspace{10pt}
     }
     \iconrow{
       \includegraphics[width=0.5cm]{account-outline.png}
     }{
-      Birth date: 01/01/1900 \newline Citizenship: none
+      Birth date: \birthdate \newline Citizenship: \citizenship
     }
   \end{tabularx}}
 }
@@ -104,7 +105,31 @@ asd
 
 \section{Skills}
 
-asd
+\twocols{
+  Itemize + columns
+}{
+  \heading{Itemize + columns}\newline
+
+  {\begin{tabularx}{0.65\textwidth}{ X X X }
+    \begin{itemize}
+      \item asd
+      \item asd
+      \item asd
+    \end{itemize}
+    &
+    \begin{itemize}
+      \item asd
+      \item asd
+      \item asd
+    \end{itemize}
+    &
+    \begin{itemize}
+      \item asd
+      \item asd
+      \item asd
+    \end{itemize}
+  \end{tabularx}}
+}
 
 % -------------------- %
 
