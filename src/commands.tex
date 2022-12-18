@@ -1,6 +1,6 @@
 \newcommand{\name}{Gianni Tumedei}
 
-\renewcommand{\title}[1]{{\huge \textbf{#1}}}
+\renewcommand{\title}[1]{{\huge \textbf{#1} \vspace{20pt}}}
 
 \renewcommand{\section}[1]{{\sffamily
   \vspace{10pt}
@@ -14,7 +14,17 @@
 
 \newcommand{\twocols}[2]{
   \begin{tabularx}{\textwidth}{ p{0.3\textwidth} X p{0.65\textwidth} }
-    \makecell[tl]{#1} && #2 \\
+  % \begin{tabularx}{\textwidth}{|p{0.3\textwidth}|X|p{0.65\textwidth}|}
+    #1 && #2 \\
   \end{tabularx}
   \vspace{20pt}
+}
+
+\newcommand{\link}[2]{\underline{\href{#1}{#2}}}
+
+\newcommand{\email}[1]{\link{mailto:#1}{#1}}
+\newcommand{\tel}[1]{\link{tel:#1}{#1}}
+
+\newcommand{\iconrow}[2]{
+  \raisebox{\dimexpr-\height+\baselineskip-2pt}{#1} & #2 \\
 }

@@ -9,19 +9,46 @@
 
 \pagestyle{style1}
 
-\title{Title}
-
-\section{Section}
-
-\heading{Heading}
-
-\subheading{Subheading}
-
-Normal
-
-\clearpage
-
 \pagestyle{style2}
+
+% -------------------- %
+
+\twocols{
+  \raisebox{\dimexpr-\height+\baselineskip}{
+    \includegraphics[width=0.3\textwidth,height=0.3\textwidth]{profile3_round.jpg}
+  }
+}{
+  \title{\name}\newline
+  {\begin{tabularx}{0.65\textwidth}{ p{1cm} X }
+    \iconrow{
+      \includegraphics[width=0.5cm]{email-outline.png}
+    }{
+      \email{a@a.aa} \newline \email{b@b.bb} \vspace{10pt}
+    }
+    \iconrow{
+      \includegraphics[width=0.5cm]{phone-outline.png}
+    }{
+      \tel{+39 123 456 7890} \vspace{10pt}
+    }
+    \iconrow{
+      \includegraphics[width=0.5cm]{web.png}
+    }{
+      \link{https://www.google.it}{https://www.google.it} \vspace{10pt}
+    }
+    \iconrow{
+      \includegraphics[width=0.5cm]{map-marker-outline.png}
+    }{
+      Address \vspace{10pt}
+    }
+    \iconrow{
+      \includegraphics[width=0.5cm]{account-outline.png}
+    }{
+      Birth date: 01/01/1900 \newline Citizenship: none
+    }
+  \end{tabularx}}
+}
+
+% -------------------- %
 
 \section{Current Occupation}
 
@@ -43,28 +70,42 @@ Content Content Content Content Content Content Content Content Content Content 
   \end{itemize}
 }
 
+% -------------------- %
+
 \section{Education and Qualifications}
 
 asd
+
+% -------------------- %
 
 \section{Publications}
 
 asd
 
+% -------------------- %
+
 \section{Awards and Acknowledgements}
 
 asd
+
+% -------------------- %
 
 \section{Scientific Conferences}
 
 asd
 
+% -------------------- %
+
 \section{Volunteering}
 
 asd
 
+% -------------------- %
+
 \section{Skills}
 
 asd
+
+% -------------------- %
 
 \end{document}
