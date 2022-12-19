@@ -1,0 +1,34 @@
+\twocols{
+  \raisebox{\dimexpr-\height+\baselineskip}{
+    \includegraphics[width=0.3\textwidth,height=0.3\textwidth]{profile3_round.jpg}
+  }
+}{
+  \title{\name}\newline
+  {\begin{tabularx}{0.65\textwidth}{ p{1cm} X }
+    \iconrow{
+      \includegraphics[width=0.5cm]{email-outline.png}
+    }{
+      \email{\emaila} \newline \email{\emailb} \newline \email{\emailc} \vspace{10pt}
+    }
+    \iconrow{
+      \includegraphics[width=0.5cm]{phone-outline.png}
+    }{
+      \tel{\phone} \vspace{10pt}
+    }
+    \iconrow{
+      \includegraphics[width=0.5cm]{web.png}
+    }{
+      \link{\website}{\website} \vspace{10pt}
+    }
+    \iconrow{
+      \includegraphics[width=0.5cm]{map-marker-outline.png}
+    }{
+      \address \vspace{10pt}
+    }
+    \iconrow{
+      \includegraphics[width=0.5cm]{account-outline.png}
+    }{
+      Birth date: \birthdate \newline Citizenship: \citizenship
+    }
+  \end{tabularx}}
+}

@@ -1,0 +1,24 @@
+\twocols{
+  \raisebox{\dimexpr-\height+\baselineskip}{
+    \includegraphics[width=0.3\textwidth,height=0.3\textwidth]{profile3_round.jpg}
+  }
+}{
+  \title{\name}\newline
+  {\begin{tabularx}{0.65\textwidth}{ p{1cm} X }
+    \iconrow{
+      \includegraphics[width=0.5cm]{web.png}
+    }{
+      \link{\website}{\website} \vspace{10pt}
+    }
+    \iconrow{
+      \includegraphics[width=0.5cm]{map-marker-outline.png}
+    }{
+      \genericaddress \vspace{10pt}
+    }
+    \iconrow{
+      \includegraphics[width=0.5cm]{account-outline.png}
+    }{
+      Birth date: \birthdate \newline Citizenship: \citizenship
+    }
+  \end{tabularx}}
+}
