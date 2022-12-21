@@ -1,0 +1,26 @@
+# Build LaTeX and upload assets to release
+
+on:
+  push:
+    branches:
+      - main
+
+name: Build and release
+
+jobs:
+  build:
+    name: Build and release
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create release asset
+        run: echo "Hello, World!" > file.txt
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: cv
+          files: file.txt
