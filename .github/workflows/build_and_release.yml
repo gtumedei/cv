@@ -16,13 +16,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Add env.tex
+      - name: Create env.tex
+        env:
+          WEBSITE: ${{ secrets.WEBSITE }}
+          GENERIC_ADDRESS: ${{ secrets.GENERIC_ADDRESS }}
+          BIRTH_DATE: ${{ secrets.BIRTH_DATE }}
+          CITIZENSHIP: ${{ secrets.CITIZENSHIP }}
         run: |
           touch env.tex
-          echo \\newcommand{\\website}{https://www.google.com} > env.tex
-          echo \\newcommand{\\genericaddress}{Address} >> env.tex
-          echo \\newcommand{\\birthdate}{01/01/1900} >> env.tex
-          echo \\newcommand{\\citizenship}{None} >> env.tex
+          echo \\newcommand{\\website}{$WEBSITE} > env.tex
+          echo \\newcommand{\\genericaddress}{$GENERIC_ADDRESS} >> env.tex
+          echo \\newcommand{\\birthdate}{$BIRTH_DATE} >> env.tex
+          echo \\newcommand{\\citizenship}{$CITIZENSHIP} >> env.tex
 
       - name: Build LaTeX documents
         uses: xu-cheng/latex-action@v2
