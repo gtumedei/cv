@@ -36,5 +36,5 @@ jobs:
         with:
           tag_name: cv
           files: |
-            gtumedei-cv-no-contact-info.tex
+            gtumedei-cv-no-contact-info.pdf
             gtumedei-publications.pdf
