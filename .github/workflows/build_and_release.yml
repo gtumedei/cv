@@ -24,17 +24,17 @@ jobs:
           echo \\newcommand{\\birthdate}{01/01/1900} >> env.tex
           echo \\newcommand{\\citizenship}{None} >> env.tex
 
-
-      - name: Build LaTeX
+      - name: Build LaTeX documents
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: gtumedei-publications.tex
-
-      - name: ls
-        run: ls -alh
+          root_file: |
+            gtumedei-cv-no-contact-info.tex
+            gtumedei-publications.tex
 
       - name: Update release assets
         uses: softprops/action-gh-release@v1
         with:
           tag_name: cv
-          files: gtumedei-publications.pdf
+          files: |
+            gtumedei-cv-no-contact-info.tex
+            gtumedei-publications.pdf
