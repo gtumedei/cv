@@ -16,6 +16,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Add env.tex
+        run: touch env.tex
+
+      - name: Build LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: gtumedei-publications.tex
+
+      - name: ls
+        run: ls -alh
+
       - name: Create release asset
         run: echo "Hello, World!" > file.txt
 
