@@ -27,11 +27,8 @@ jobs:
       - name: ls
         run: ls -alh
 
-      - name: Create release asset
-        run: echo "Hello, World!" > file.txt
-
-      - name: Release
+      - name: Update release assets
         uses: softprops/action-gh-release@v1
         with:
           tag_name: cv
-          files: file.txt
+          files: gtumedei-publications.pdf
