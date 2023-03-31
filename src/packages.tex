@@ -28,6 +28,8 @@
 \usepackage{fancyhdr}
 % Create cells inside tables
 \usepackage{makecell}
+% Customize section style
+\usepackage{titlesec}
 
 % Package config
 % -------------------- %
@@ -76,3 +78,16 @@
   \fancyhead[R]{\name}
   \fancyfoot[R]{\thepage}
 }
+
+% Hide section numbers without breaking everything
+\renewcommand\thesection{}
+\makeatletter
+\def\@seccntformat#1{\csname #1ignore\expandafter\endcsname\csname the#1\endcsname\quad}
+\let\sectionignore\@gobbletwo
+\let\latex@numberline\numberline
+\def\numberline#1{\if\relax#1\relax\else\latex@numberline{#1}\fi}
+\makeatother
+
+% Setup section style
+\titleformat{\section}[hang]
+  {\sffamily\bfseries\color{sky}}{\thesection}{0em}{\MakeUppercase}
