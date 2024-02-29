@@ -1,25 +1,35 @@
 \newcommand{\name}{Gianni Tumedei}
 
-\renewcommand{\title}[1]{{\huge \textbf{#1} \vspace{20pt}}}
+\renewcommand{\title}[1]{{\huge \textbf{#1}\vspace{20pt}}}
 
-\newcommand{\heading}[1]{{\large \textbf{#1} \vspace{4pt}}}
+\newcommand{\heading}[1]{{\large \textbf{#1}\vspace{4pt}}}
 
-\newcommand{\subheading}[1]{\textit{#1}\newline}
+\newcommand{\subheading}[1]{\textit{#1}\vspace{4pt}}
 
 \newcommand{\twocols}[2]{
-  \begin{tabularx}{\textwidth}{ p{0.3\textwidth} X p{0.65\textwidth} }
-  % \begin{tabularx}{\textwidth}{|p{0.3\textwidth}|X|p{0.65\textwidth}|}
-    #1 && #2 \\
+  \begin{tabularx}{\textwidth}{ p{0.3\textwidth} X >{\setlength{\parskip}{6pt}}p{0.65\textwidth} }
+  % \begin{tabularx}{\textwidth}{|p{0.3\textwidth}|X|>{\setlength{\parskip}{6pt}}p{0.65\textwidth}|}
+    #1
+
+    &&
+
+    #2
+
+    \\
   \end{tabularx}
-  \vspace{20pt}
 }
 
 \newcommand{\invertedtwocols}[2]{
   \begin{tabularx}{\textwidth}{ p{0.65\textwidth} X >{\raggedleft\arraybackslash}p{0.3\textwidth} }
   % \begin{tabularx}{\textwidth}{|p{0.65\textwidth}|X|>{\raggedleft\arraybackslash}p{0.3\textwidth}|}
-    #1 && #2 \\
+    #1
+
+    &&
+
+    #2
+
+    \\
   \end{tabularx}
-  \vspace{20pt}
 }
 
 \newcommand{\link}[2]{\underline{\href{#1}{#2}}}

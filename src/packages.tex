@@ -20,6 +20,8 @@
 \usepackage{float}
 % Customize lists
 \usepackage{enumitem}
+% Customize the line height
+\usepackage{setspace}
 % Customize the space between paragraphs
 \usepackage{parskip}
 % Provide additional color syntax
@@ -34,8 +36,12 @@
 % Package config
 % -------------------- %
 
+% Set line height
+\setstretch{1.2}
 % Remove indent for the first paragraph line
 \setlength{\parindent}{0pt}
+% Set space between paragraphs
+\setlength{\parskip}{6pt}
 
 % Remove table cell padding
 \renewcommand{\tabcolsep}{1pt}
@@ -53,8 +59,8 @@
 % Use dashes for itemize
 \renewcommand\labelitemi{-}
 
-% Decrease itemize left margin
-\setlist[itemize]{leftmargin=*}
+% Remove space between itemize elements and decrease the left margin
+\setlist[itemize]{nosep,leftmargin=*}
 
 % Set graphics folder path
 \graphicspath{{./img/}}
