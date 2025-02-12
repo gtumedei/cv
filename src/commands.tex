@@ -8,10 +8,10 @@
 
 \newcommand{\twocols}[2]{
   \begin{tabularx}{\textwidth}{ p{0.3\textwidth} X >{\setlength{\parskip}{6pt}}p{0.65\textwidth} }
-  % \begin{tabularx}{\textwidth}{|p{0.3\textwidth}|X|>{\setlength{\parskip}{6pt}}p{0.65\textwidth}|}
+    % \begin{tabularx}{\textwidth}{|p{0.3\textwidth}|X|>{\setlength{\parskip}{6pt}}p{0.65\textwidth}|}
     #1
 
-    &&
+     &  &
 
     #2
 
@@ -21,10 +21,10 @@
 
 \newcommand{\invertedtwocols}[2]{
   \begin{tabularx}{\textwidth}{ p{0.65\textwidth} X >{\raggedleft\arraybackslash}p{0.3\textwidth} }
-  % \begin{tabularx}{\textwidth}{|p{0.65\textwidth}|X|>{\raggedleft\arraybackslash}p{0.3\textwidth}|}
+    % \begin{tabularx}{\textwidth}{|p{0.65\textwidth}|X|>{\raggedleft\arraybackslash}p{0.3\textwidth}|}
     #1
 
-    &&
+     &  &
 
     #2
 
@@ -38,5 +38,5 @@
 \newcommand{\tel}[1]{\link{tel:#1}{#1}}
 
 \newcommand{\iconrow}[2]{
-  \raisebox{\dimexpr-\height+\baselineskip-2pt}{#1} & #2 \\
+  \raisebox{\dimexpr-\height+\baselineskip-4pt}{#1} & #2 \\
 }
