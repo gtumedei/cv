@@ -6,3 +6,7 @@ My personal CV, written in LaTeX.
 
 - [CV](https://github.com/gtumedei/cv/releases/latest/download/gtumedei-cv-no-contact-info.pdf)
 - [Publications](https://github.com/gtumedei/cv/releases/latest/download/gtumedei-publications.pdf)
+
+## TODO
+
+- [ ] Add a "Software Projects" section (or something similar) with everything related to software development
