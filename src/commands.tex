@@ -4,18 +4,16 @@
 
 \newcommand{\heading}[1]{{\large \textbf{#1}\vspace{4pt}}}
 
-\newcommand{\subheading}[1]{\textit{#1}\vspace{4pt}}
+\newcommand{\subheading}[1]{\textit{#1}\vspace{2pt}}
 
 \newcommand{\twocols}[2]{
-  \begin{tabularx}{\textwidth}{ p{0.3\textwidth} X >{\setlength{\parskip}{6pt}}p{0.65\textwidth} }
+  \begin{tabularx}{\textwidth}{ p{0.2\textwidth} X >{\setlength{\parskip}{6pt}}p{0.75\textwidth} }
     % \begin{tabularx}{\textwidth}{|p{0.3\textwidth}|X|>{\setlength{\parskip}{6pt}}p{0.65\textwidth}|}
     #1
 
      &  &
 
-    #2
-
-    \\
+    #2\vspace{8pt}
   \end{tabularx}
 }
 
@@ -32,11 +30,16 @@
   \end{tabularx}
 }
 
-\newcommand{\link}[2]{\underline{\href{#1}{#2}}}
+\newcommand{\anchor}[2]{\underline{\href{#1}{#2}}}
+\newcommand{\link}[1]{\anchor{#1}{#1}}
 
-\newcommand{\email}[1]{\link{mailto:#1}{#1}}
-\newcommand{\tel}[1]{\link{tel:#1}{#1}}
+\newcommand{\email}[1]{\anchor{mailto:#1}{#1}}
+\newcommand{\tel}[1]{\anchor{tel:#1}{#1}}
 
 \newcommand{\iconrow}[2]{
   \raisebox{\dimexpr-\height+\baselineskip-4pt}{#1} & #2 \\
+}
+
+\newcommand{\hsep}{
+  {\par\noindent\color{lightgray}\rule{\textwidth}{0.4pt}}\vspace{10pt}
 }

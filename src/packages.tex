@@ -95,5 +95,23 @@
 \makeatother
 
 % Setup section style
-\titleformat{\section}[hang]
-{\sffamily\bfseries\color{sky}}{\thesection}{0em}{\MakeUppercase}
+\titlespacing{\section}{0pt}{19pt}{19pt}
+\titleformat{\section}
+[hang]
+{\sffamily\bfseries\color{sky}\vbox\bgroup}
+{\thesection}
+{0pt}
+{\MakeUppercase}
+[\nopagebreak\vspace{4pt}\color{lightgray}\titlerule\egroup]
+
+% Setup subsection style
+\titlespacing{\subsection}{0pt}{8pt}{12pt}
+\titleformat{\subsection}
+[hang]
+{\bfseries\large}
+{\thesection}
+{0pt}
+{}
+
+% Reference only sections in the table of contents (no subsections etc.)
+\setcounter{tocdepth}{1}
