@@ -43,3 +43,13 @@
 \newcommand{\hsep}{
   {\par\noindent\color{lightgray}\rule{\textwidth}{0.4pt}}\vspace{10pt}
 }
+
+\newenvironment{tableitemize}
+{
+
+  \begin{minipage}[t]{\linewidth}%
+    \begin{itemize}}
+      {\end{itemize}%
+  \end{minipage}}
+
+\newcommand\todo[1]{\textcolor{red}{[TODO] #1}}
